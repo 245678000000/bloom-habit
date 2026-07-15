@@ -127,8 +127,8 @@ export function HabitsView() {
   };
 
   return (
-    <div className="space-y-4 pb-8">
-      <Card>
+    <div className="space-y-4 pb-8 md:space-y-5">
+      <Card className="md:max-w-none">
         <CardHeader>
           <CardTitle>习惯库</CardTitle>
           <CardDescription>创建专属你的温柔节律，慢慢长成理想生活。</CardDescription>
@@ -277,7 +277,7 @@ export function HabitsView() {
           <CardTitle>进行中 ({activeHabits.length})</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-3">
+          <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
             {activeHabits.map((habit, index) => (
               <div
                 key={habit.id}
@@ -357,7 +357,7 @@ export function HabitsView() {
               </div>
             ))}
             {!activeHabits.length && (
-              <div className="rounded-3xl border border-dashed border-white/50 p-8 text-center text-sm text-[#789085] dark:text-[#9eb3a8]">
+              <div className="rounded-3xl border border-dashed border-white/50 p-8 text-center text-sm text-[#789085] dark:text-[#9eb3a8] lg:col-span-2">
                 <Flower2 className="mx-auto mb-2 h-5 w-5" />
                 还没有习惯，先种下一颗小小种子吧。
               </div>

@@ -16,7 +16,7 @@ export function ProgressRing({ value, className }: ProgressRingProps) {
   return (
     <div
       className={cn(
-        "relative mx-auto flex h-52 w-52 items-center justify-center rounded-full p-3 shadow-soft",
+        "relative mx-auto flex h-44 w-44 items-center justify-center rounded-full p-3 shadow-soft sm:h-52 sm:w-52 lg:h-56 lg:w-56",
         className
       )}
       style={{

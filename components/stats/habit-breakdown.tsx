@@ -28,7 +28,7 @@ export function HabitBreakdown({ state }: { state: HabitStore }) {
         <CardDescription>近 30 天完成率 · 当前 / 最长连胜</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="space-y-3">
+        <div className="grid grid-cols-1 gap-3 xl:grid-cols-1">
           {rows.map(({ habit, rate, current, longest }) => (
             <div
               key={habit.id}

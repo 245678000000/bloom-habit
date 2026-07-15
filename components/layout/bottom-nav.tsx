@@ -2,24 +2,20 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, BookHeart, BarChart3, Settings2 } from "lucide-react";
 
+import { NAV_ITEMS } from "@/components/layout/nav-items";
 import { cn } from "@/lib/utils";
-
-const items = [
-  { href: "/", label: "首页", icon: Home },
-  { href: "/habits", label: "习惯库", icon: BookHeart },
-  { href: "/stats", label: "统计", icon: BarChart3 },
-  { href: "/settings", label: "设置", icon: Settings2 }
-] as const;
 
 export function BottomNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-5 left-1/2 z-40 w-[min(560px,calc(100%-1.5rem))] -translate-x-1/2 rounded-3xl border border-white/40 bg-white/82 p-2 shadow-soft backdrop-blur-xl dark:border-white/10 dark:bg-[#1f2722]/85">
+    <nav
+      aria-label="底部导航"
+      className="fixed bottom-5 left-1/2 z-40 w-[min(560px,calc(100%-1.5rem))] -translate-x-1/2 rounded-3xl border border-white/40 bg-white/82 p-2 shadow-soft backdrop-blur-xl dark:border-white/10 dark:bg-[#1f2722]/85 md:hidden"
+    >
       <ul className="grid grid-cols-4 gap-1">
-        {items.map((item) => {
+        {NAV_ITEMS.map((item) => {
           const active = pathname === item.href;
           const Icon = item.icon;
           return (

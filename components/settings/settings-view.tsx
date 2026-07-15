@@ -44,7 +44,7 @@ export function SettingsView() {
   };
 
   return (
-    <div className="space-y-4 pb-8">
+    <div className="mx-auto max-w-3xl space-y-4 pb-8 md:space-y-5">
       <Card>
         <CardHeader>
           <CardTitle>个人偏好</CardTitle>
