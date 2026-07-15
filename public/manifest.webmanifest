@@ -1,0 +1,19 @@
+{
+  "name": "Bloom Habit · 绽放习惯",
+  "short_name": "Bloom",
+  "description": "让每一天都悄悄开花",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f0e8",
+  "theme_color": "#a8caba",
+  "lang": "zh-CN",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
